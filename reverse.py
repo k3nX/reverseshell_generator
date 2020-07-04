@@ -105,7 +105,7 @@ p.waitFor()\n''' %(ip,port))
           sys.stdout.flush()
           sleep(0.03)
 def listener():
-    listen=input("Are you want to open listener with nc: (y,n)")
+    listen=input("Do you want to open listener with nc (y,n):  ")
     if listen == 'y':
         os.system("nc -lvnp" + port)
     else:
