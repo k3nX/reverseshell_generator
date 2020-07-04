@@ -4,4 +4,21 @@
 This is simple reverse shell generator with listener
 
 ```
-## You need to install netcat or nc in your machine
+## Installation
+```
+$ sudo chmod +x install.sh
+$ ./install.sh
+```
+or 
+```
+$ sudo bash install.sh
+```
+## Uninstallation
+```
+$ sudo chmod +x uninstall.sh
+$ ./uninstall.sh
+```
+or 
+```
+$sudo bash uninstall.sh
+```
