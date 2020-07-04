@@ -172,7 +172,7 @@ int main(){
     print(c)
 def author():
     author = ["K3nX", "Bl@ck_V1rtu@l", "C00l_K3lv1n", "D@ni3l"]
-    print ("All Author are \n") 
+    print ("All Author are ") 
     author = (author[0]+' '+','+' '+ author[1]+' '+','+' '+author[2]+' '+','+' '+author[3]+"\n")
     for i in author:
         print(i,end='')
