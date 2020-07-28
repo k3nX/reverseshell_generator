@@ -22,5 +22,5 @@ or
 ```
 $sudo bash uninstall.sh
 ```
-
+## Demo 
 ![Demo](demo.gif)
